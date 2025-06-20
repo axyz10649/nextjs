@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function HomePage() {
   const [file, setFile] = useState(null);
@@ -93,6 +94,12 @@ export default function HomePage() {
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-800 mb-2">Resume Shortlister</h1>
           <p className="text-gray-600">Upload your resume and analyze its match with job descriptions</p>
+          <Link
+            href="/results"
+            className="mt-4 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-colors text-sm font-medium"
+          >
+            View Previous Analyses →
+          </Link>
         </div>
 
         {/* Tabs */}
@@ -152,11 +159,11 @@ export default function HomePage() {
               </div>
             )}
 
-            {resumeUrl && (
+            {/* {resumeUrl && (
               <div className="p-3 bg-gray-100 rounded-lg text-sm text-gray-700 break-all">
                 <span className="font-medium">Uploaded resume:</span> {resumeUrl}
               </div>
-            )}
+            )} */}
           </div>
         )}
 
