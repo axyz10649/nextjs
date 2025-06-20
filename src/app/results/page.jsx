@@ -12,7 +12,7 @@ export default function ResultsPage() {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const res = await fetch("http://localhost:8000/results");
+        const res = await fetch("https://fastapi-backend-z04m.onrender.com/results");
         if (!res.ok) throw new Error(await res.text());
 
         const data = await res.json();

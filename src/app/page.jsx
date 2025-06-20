@@ -34,7 +34,7 @@ export default function HomePage() {
     formData.append("file", file);
 
     try {
-      const res = await fetch("http://localhost:8000/upload-resume", {
+      const res = await fetch("https://fastapi-backend-z04m.onrender.com/upload-resume", {
         method: "POST",
         body: formData,
       });
