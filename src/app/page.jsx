@@ -82,12 +82,12 @@ export default function HomePage() {
       setTimeout(() => {
         setAnalysis(mockResponse);
         setStatus("✅ Resume analyzed successfully!");
-        localStorage.removeItem("resumeUrl"); // 🔥 Remove after successful analysis
+        localStorage.removeItem("resumeUrl");
         setResumeUrl("");
       }, 1000);
     } catch (err) {
       setStatus("❌ Analysis failed.");
-      localStorage.removeItem("resumeUrl"); // 🔥 Remove after successful analysis
+      localStorage.removeItem("resumeUrl");
       setResumeUrl("");
     }
   };
@@ -95,7 +95,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 flex flex-col items-center justify-center px-4 py-8">
       <div className="w-full max-w-2xl space-y-6 bg-white shadow-xl rounded-2xl p-8">
-        <div className="text-center">
+        {/* <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-800 mb-2">Resume Shortlister</h1>
           <p className="text-gray-600">Upload your resume and analyze its match with job descriptions</p>
           <Link
@@ -104,7 +104,7 @@ export default function HomePage() {
           >
             View Previous Analyses →
           </Link>
-        </div>
+        </div> */}
 
         {/* Tabs */}
         <div className="flex border-b">
